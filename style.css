@@ -16,6 +16,7 @@
     --Desaturated-blue: hsl(224, 23%, 55%);
     --Dark-blue: hsl(223, 47%, 23%);
     --Font-size-paragraph: 16px;
+    --Active-state : hsl(245, 38%, 48%);
 }
 
 body{
@@ -37,6 +38,7 @@ body{
     transform: translate(-50%,-50%);
     border: none;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .card__image,.card__image__img{
@@ -89,6 +91,11 @@ body{
     margin-right: 20px;
 }
 
+.card__information__subscriptionBox__right:hover{
+    text-decoration: none;
+    color: var(--Active-state);
+}
+
 .card__information__subscription-box__left__annual-plan-cost{
     display: flex;
     flex-direction: column;
@@ -111,6 +118,7 @@ body{
     display: block;
     color: white;
     text-decoration: none;
+    font-weight: 900;
     
 
     border-radius: 12px;
@@ -121,11 +129,98 @@ body{
     padding-top: 15px;
 
     margin-bottom: 20px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px;
+}
+
+.card__information__payment-button:hover{
+    background-color: var(--Active-state);
 }
 
 .card__information__payment-cancel{
 
     background-color: white; 
     text-decoration: none;  
+    font-weight: 900;
     color: var(--Desaturated-blue); 
+}
+.card__information__payment-cancel:hover{
+    color: var(--Dark-blue);
+}
+
+
+@media screen and (max-width : 425px) {
+    
+    body{
+        height: 100vh;
+        width: 100vw;
+        background: url(/images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--Pale-blue);
+    }
+    
+    .card{
+        position: relative;
+        width: 310px;
+        height: 540px;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 20px;
+    }
+    
+    .card__image,.card__image__img{
+        height: 155px;
+        width: 310px;
+    
+        border-radius: 20px 20px 0px 0px;
+    }
+    
+    .card__information{
+        padding :10px;
+        text-align: center;
+    }
+    
+    .card__information__title{
+        margin-bottom: 10px;
+    }
+    
+    .card__information__description{
+        margin-bottom: 15px;
+    }
+    
+    .card__information__subscription-box{
+        background-color: var(--Very-pale-blue);
+        width: 290px;
+        height: 70px;
+        padding: 0px 10px;
+    
+        margin-bottom: 35px;
+    }
+       
+    .card__information__subscription-box__left__annual-plan-cost{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+        height: 50px;
+    }
+    
+    
+    .card__information__subscription-box__left__annual-plan-cost__annual-plan{
+        font-weight: 900;
+    }
+    
+    .card__information__subscription-box__left__annual-plan-cost__cost{
+        color: var(--Desaturated-blue);
+    }
+    
+    .card__information__payment-button{
+        width: 290px;
+    }
+    
+
 }
