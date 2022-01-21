@@ -67,4 +67,65 @@ body{
     width: 350px;
     height: 100px;
     border-radius: 12px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 20px;
+
+    margin-bottom: 35px;
+}
+
+.card__information__subscription-box__left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__information__subscription-box__left__img{
+    margin-right: 20px;
+}
+
+.card__information__subscription-box__left__annual-plan-cost{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+}
+
+
+.card__information__subscription-box__left__annual-plan-cost__annual-plan{
+    font-weight: 900;
+}
+
+.card__information__subscription-box__left__annual-plan-cost__cost{
+    color: var(--Desaturated-blue);
+}
+
+.card__information__payment-button{
+    display: block;
+    color: white;
+    text-decoration: none;
+    
+
+    border-radius: 12px;
+    width: 355px;
+    height: 50px;
+    background-color: var(--Bright-blue);
+
+    padding-top: 15px;
+
+    margin-bottom: 20px;
+}
+
+.card__information__payment-cancel{
+
+    background-color: white; 
+    text-decoration: none;  
+    color: var(--Desaturated-blue); 
 }
